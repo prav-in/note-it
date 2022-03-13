@@ -4,7 +4,7 @@
 Note It is a Note taking App
 that allows you to write down your custom notes
 ## Preview
-[visit note it !](prav-in.github.io/note-it/)
+[visit note it !](https://prav-in.github.io/note-it/)
 ## Overview
 
 Built using Plain JS, HTML and CSS, no framework used.
