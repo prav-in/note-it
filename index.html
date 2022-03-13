@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/favicon.jpg" />
+
+    <script
+      src="https://kit.fontawesome.com/601654966e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js" defer></script>
+    <title>Note It!</title>
+  </head>
+  <body>
+    <h1 class="heading">Add New Note</h1>
+
+    <form id="notes-form" class="new-note">
+      <label for="title" class="new-note__label">Title : </label>
+
+      <input type="text" id="title" name="title" class="new-note__title" />
+      <br /><br />
+
+      <label for="note" class="new-note__label">Note : </label>
+
+      <textarea
+        id="note"
+        name="note"
+        rows="12"
+        cols="40"
+        class="new-note__noteText"
+      ></textarea>
+
+      <button onclick="handleSubmit(event)" class="new-note__btn">
+        + Add Note
+      </button>
+    </form>
+
+    <main id="notes-list"></main>
+  </body>
+</html>
