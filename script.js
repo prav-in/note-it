@@ -1,5 +1,5 @@
+let heading = document.getElementsByClassName("heading")[0];
 let notesContainer = document.getElementById("notes-list");
-let notesForm = document.getElementById("notes-form");
 let notesTitle = document.getElementById("title");
 let notesText = document.getElementById("note");
 let submitBtn = document.getElementsByClassName("new-note__btn")[0];
@@ -27,7 +27,7 @@ const addNewNote = () => {
 
     renderList();
   } else {
-    alert("input required");
+    notesText.value ? alert("Enter The Title") : alert("Please Write A Note");
   }
 };
 
@@ -41,15 +41,18 @@ const updateNote = () => {
     notesTitle.value = "";
     notesText.value = "";
     renderList();
-    submitBtn.innerHTML = "+ Add Note";
+
+    heading.innerText = `Add New Note`;
+    submitBtn.innerHTML = ` <i class="fa-solid fa-plus"></i> Add Note`;
     isNew = true;
   } else {
-    alert("input required");
+    notesText.value ? alert("Enter The Title") : alert("Please Write A Note");
   }
 };
 
 const handleUpdate = (e) => {
-  submitBtn.innerHTML = "Update";
+  heading.innerText = `Update Note`;
+  submitBtn.innerHTML = `<i class="fa-regular fa-circle-check"></i> Update Note`;
   isNew = false;
   ind = Number(e.target.getAttribute("data-key"));
   notesTitle.value = notesArray[ind].title;

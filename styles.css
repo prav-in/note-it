@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, Courier,
+    monospace;
+}
+
+/* new note */
+
+.heading {
+  margin: 40px auto 20px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  border-bottom: 1px solid lightgray;
+  width: 550px;
+}
+
+.new-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.new-note__section {
+  margin-bottom: 15px;
+  width: 550px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.new-note__label {
+  margin-left: 35px;
+  font-weight: 500;
+}
+
+.new-note__input {
+  width: 75%;
+  font-size: 1rem;
+  padding: 10px 10px;
+  overflow-y: auto;
+}
+
+.new-note__input.title {
+  height: 35px;
+}
+
+.new-note__btn {
+  outline: none;
+  border: none;
+  margin-left: 10%;
+  height: 34px;
+  width: 110px;
+  background: #327ab6;
+  color: white;
+  font-weight: 500;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.new-note__btn:hover {
+  background: #428fce;
+}
+
+.new-note__btn:active {
+  background: #327ab6;
+  outline: 1px solid #b3cbe1;
+}
+
+.fa-plus {
+  margin-right: 5px;
+  -webkit-text-stroke: 1px;
+}
+
+/* notes container */
+
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(2, 350px);
+  justify-items: center;
+  align-items: center;
+  row-gap: 20px;
+  justify-content: center;
+}
+
+.note {
+  height: 180px;
+  width: 300px;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  word-wrap: break-word;
+  border: 1px solid lightgray;
+  overflow-y: auto;
+}
+
+.note__edit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.note h2 {
+  text-align: center;
+  font-weight: 400;
+}
+
+.note p {
+  font-weight: 1rem;
+  padding-top: 15px;
+}
+
+/* for mobile screens*/
+
+@media screen and (max-width: 600px) {
+  .heading {
+    width: 350px;
+  }
+
+  .new-note__section {
+    width: 350px;
+  }
+
+  .new-note__input {
+    width: 70%;
+  }
+
+  .notes-container {
+    grid-template-columns: 350px;
+  }
+}
